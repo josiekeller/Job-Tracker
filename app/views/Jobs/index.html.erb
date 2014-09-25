@@ -1,0 +1,18 @@
+<h1>Application Tracker</h1>
+<%= link_to 'Track New Job', new_job_path %>
+
+<table>
+	<tr>
+		<th>Company</th>
+		<th>Title</th>
+		<th>Job Description URL</th>
+	</tr>
+
+<% @jobs.each do |job| %>
+	<tr>
+		<td><%= job.company %></td>
+		<td><%= link_to job.title, edit_job_path(job) %></td>
+		<td><%= job.url %></td>
+	</tr>
+<% end %>
+</table>

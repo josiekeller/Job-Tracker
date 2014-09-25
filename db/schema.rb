@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(version: 20140923012132) do
 
   create_table "jobs", force: true do |t|
-    t.string   "Company"
-    t.string   "Title"
-    t.string   "Description_URL"
+    t.string   "company"
+    t.string   "title"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
