@@ -2,7 +2,7 @@ class JobsController < ApplicationController
 before_action :authenticate_user!
 
 	def index
-		@jobs = Job.all
+		@jobs = current_user.jobs
 	end
 
 	def new
@@ -10,8 +10,9 @@ before_action :authenticate_user!
 	end
 
 	def create
-		@job = Job.new(job_params)
-
+		@job = current_user.jobs.build(job_params)
+		# @job = Job.new(job_params)
+		# @job.user = current_user
 		@job.save
 		redirect_to jobs_path
 	end
