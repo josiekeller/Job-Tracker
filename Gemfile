@@ -17,6 +17,8 @@ group :development do
 	gem "better_errors"
 end
 
+gem 'twitter-bootstrap-rails'
+
 gem 'devise'
 
 gem "binding_of_caller"
