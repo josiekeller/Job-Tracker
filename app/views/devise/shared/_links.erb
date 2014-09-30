@@ -4,7 +4,7 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to image_tag("signin_with_#{provider.to_s}.png"), omniauth_authorize_path(resource_name, provider) %><br />
+    <%= link_to image_tag("signin_with_linkedin.png"), omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
