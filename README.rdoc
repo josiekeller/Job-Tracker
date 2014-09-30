@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Job-Tracker is a job application tracker for candidates to store jobs for which they have applied or are planning to apply. The tracker queries the job description URL for a response code to tell the candidate whether the job is still active or if it has been removed.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* Ruby version: 2.1.2 | Rails version: 4.1.4
 
 * Configuration
 
-* Database creation
+  * app/config/initializers/devise.rb
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+	* require: 'omniauth-linkedin'
+	* config.omniauth :linked_in, "KEY", "SECRET"
