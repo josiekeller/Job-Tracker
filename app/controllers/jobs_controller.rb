@@ -40,6 +40,6 @@ before_action :authenticate_user!
 
 	private
 		def job_params
-			params.require(:job).permit(:company, :title, :url)
+			params.require(:job).permit(:company, :title, :url, :apply)
 		end
 end

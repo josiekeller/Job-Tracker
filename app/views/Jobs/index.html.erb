@@ -2,7 +2,7 @@
 
 </br>
 
-<%= link_to 'Track New Job', new_job_path %>
+<%= link_to 'Track New Job', new_job_path, class: 'btn btn-default' %>
 
 <table class="flat-table flat-table-1">
 	<tr>
@@ -10,6 +10,7 @@
 		<th>Title</th>
 		<th>Job Description URL</th>
 		<th>Job Status</th>
+		<th>Applied?</th>
 		<th>Edit</th>
 	</tr>
 
@@ -19,6 +20,7 @@
 				<td><%= job.title %></td>
 				<td><%= link_to job.url, job.url %></td>
 				<td><%= job.res_display(job.query_link) %></td>
+				<td><%= job.applied? %></td>
 				<td><%= link_to 'Edit', edit_job_path(job) %> | <%= link_to 'Delete Job', job_path(job), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		<% end %>

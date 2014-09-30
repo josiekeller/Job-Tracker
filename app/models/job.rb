@@ -19,4 +19,8 @@ class Job < ActiveRecord::Base
 		end
 	end
 
+	def applied?
+		self.apply ? "Yes" : "No"
+	end
+
 end
