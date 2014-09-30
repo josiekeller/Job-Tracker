@@ -7,6 +7,5 @@ Job-Tracker is a job application tracker for candidates to store jobs for which 
 * Configuration
 
   * app/config/initializers/devise.rb
-
-	* require: 'omniauth-linkedin'
+  * require: 'omniauth-linkedin'
 	* config.omniauth :linked_in, "KEY", "SECRET"
