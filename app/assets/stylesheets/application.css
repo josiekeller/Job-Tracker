@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.flat-table {
+  margin-bottom: 20px;
+  border-collapse:collapse;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  border: none;
+  border-radius: 3px;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ width: 100%;
+ text-align: left;
+}
+
+.flat-table a:link {color:#FFF; text-align: center;}      /* unvisited link */
+.flat-table a:visited {color:#FFF;}  /* visited link */
+.flat-table a:hover {color:#FFF}  /* mouse over link */
+.flat-table a:active {color:#FFF;}  /* selected link */
+
+.flat-table img {
+  max-width:300;
+  max-height: 300px;
+}
+
+.flat-table th, .flat-table td {
+  box-shadow: inset 0 -1px rgba(0,0,0,0.25), 
+    inset 0 1px rgba(0,0,0,0.25);
+}
+.flat-table th {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 1em;
+  color: rgba(0,0,0,0.65);
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
+  font-size: 1.5em;
+}
+.flat-table td {
+  color: #f7f7f7;
+  padding: 0.7em 1em 0.7em 1.15em;
+  text-shadow: 0 0 1px rgba(255,255,255,0.1);
+  font-size: 1.4em;
+}
+
+.flat-table td img {
+  max-width:300;
+  max-height: 300px;
+}
+
+.flat-table td #food_photo {
+    max-width:300;
+    max-height: 300px;
+}
+
+
+.flat-table tr {
+  -webkit-transition: background 0.3s, box-shadow 0.3s;
+  -moz-transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.flat-table-1 {
+  background: rgb(102, 195, 229)
+}
+.flat-table-1 tr:hover {
+  background: rgba(0,0,0,0.19);
+}
+

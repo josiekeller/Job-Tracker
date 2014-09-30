@@ -1,0 +1,30 @@
+<h1>Application Tracker</h1>
+
+<% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></div>
+<% end %>
+
+</br>
+
+<%= link_to 'Track New Job', new_job_path %>
+
+<table class="flat-table flat-table-1">
+	<tr>
+		<th>Company</th>
+		<th>Title</th>
+		<th>Job Description URL</th>
+		<th>Job Status</th>
+		<th>Edit</th>
+	</tr>
+
+<% @jobs.each do |job| %>
+			<tr>
+				<td><%= job.company %></td>
+				<td><%= job.title %></td>
+				<td><%= link_to job.url, job.url %></td>
+				<td><%= job.res_display(job.query_link) %></td>
+				<td><%= link_to 'Edit', edit_job_path(job) %> | <%= link_to 'Delete Job', job_path(job), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+</table>
+
