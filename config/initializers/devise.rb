@@ -6,6 +6,10 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '89960ba7c4351b5f9947f2eb5266c676b6a56151b9646fbaa6abcb33ba5225ab79975ac4123da2d0998b2c72467d48fecdd84d3669fa14f136f817db4fb218bf'
 
+  # ==> Omniauth Configuration
+  require 'omniauth-linkedin'
+  config.omniauth :linkedin, "77bc2ub36gg6gl", "KUb4p4K1qrBqh0kg"
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

@@ -1,9 +1,5 @@
 <h1>Application Tracker</h1>
 
-<% if user_signed_in? %>
-  <div>Signed in as... <%= current_user.email %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></div>
-<% end %>
-
 </br>
 
 <%= link_to 'Track New Job', new_job_path %>

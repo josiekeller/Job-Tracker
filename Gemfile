@@ -23,6 +23,9 @@ gem 'twitter-bootstrap-rails'
 
 gem 'devise'
 
+gem 'omniauth'
+gem 'omniauth-linkedin'
+
 gem "binding_of_caller"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

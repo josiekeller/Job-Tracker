@@ -2,6 +2,13 @@
 <html>
 <head>
   <title>JobTracker</title>
+
+  	 <% if user_signed_in? %>
+		Signed in as <%= current_user.email %>. Not you?
+		<%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+
+		<% end %>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
