@@ -9,4 +9,14 @@ class Job < ActiveRecord::Base
 		return res.code
 	end
 
+	def res_display(code)
+		if code == "200"
+			return "Active Job"
+		elsif code == "404"
+			return "Inactive Job"
+		else
+			return "Unknown Status"
+		end
+	end
+
 end
